@@ -1,0 +1,29 @@
+# pip install -U -r requirements.txt
+# these are the versions of packages that were tested
+
+
+Cython
+numpy==1.24.4
+opencv-python==4.9.0.80
+opencv-python-headless==4.8.0.74
+opencv-contrib-python==4.9.0.80
+torch==2.2.2
+torchvision==0.17.2
+matplotlib==3.7.5
+pillow==10.3.0
+tensorboard==2.14.0
+PyYAML==6.0.1
+scipy==1.10.1
+tqdm=4.66.2
+git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
+
+# Nvidia Apex (optional) for mixed precision training --------------------------
+# git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" . --user && cd .. && rm -rf apex
+
+# Conda commands (in place of pip) ---------------------------------------------
+# conda update -yn base -c defaults conda
+# conda install -yc anaconda numpy opencv matplotlib tqdm pillow ipython
+# conda install -yc conda-forge scikit-image pycocotools tensorboard
+# conda install -yc spyder-ide spyder-line-profiler
+# conda install -yc pytorch pytorch torchvision
+# conda install -yc conda-forge protobuf numpy && pip install onnx==1.6.0  # https://github.com/onnx/onnx#linux-and-macos
